@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Contact Us | Skin Bliss</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/png" href="images/favicon.png">
+        <link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+        <link rel="stylesheet" type = "text/css" href = "css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css"> 
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <script> 
+            $(function(){
+              $("#header").load("header.jsp"); 
+              $("#footer").load("footer.html"); 
+            });
+        </script>
+    </head>
+    <body>
+        <div id="header"></div>
+        <div class="content">
+            <div class="feedbackForm">
+                <center><h1>Kindly submit the form below to help us improve</h1></center>
+                <div class="feedbackContent">
+                    <form action="thankyou.jsp" method="post">
+                        <p>Name: <input type="text" name="name" size="30" placeholder="Please enter your name" required></p>
+                        <p>Phone Number: <input type="text" name="phoneNo" size="20" placeholder="Please enter your phone number" required></p>
+                        <p>Email: <input type="email" name="email" size="30" placeholder="Please enter your email" required></p>
+                        <p>Suggestions:
+                        <br><textarea name="feedback" rows="5" cols="40" placeholder="Write your feedback here..." required></textarea></p>
+                        <p>
+                            Do you wish to receive latest information from us?
+                            <br><input type="radio" name="information" value="yes" checked>Yes &nbsp <input type="radio" name="information" value="no">No
+                        </p>
+                        <p class="text-right">
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Clear">
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>    
+    </body>
+</html>
